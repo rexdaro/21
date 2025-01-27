@@ -43,3 +43,48 @@ const crearDeck = () => {
 
 crearDeck();
 
+
+// Esta funcion me permite tomar una carta
+
+const pedirCarta = () => {    
+
+
+    if (deck.length === 0) {
+        throw 'no hay cartas en el deck';
+
+    }
+    
+    let carta = deck.pop();
+    
+    console.log(deck);
+    console.log(carta);
+    return carta;
+
+   
+}
+
+
+
+// pedirCarta();
+
+
+const valorCarta = (carta) => {
+
+    const valor = carta.substring(0, carta.length - 1);
+    let puntos = 0;
+
+    if (isNaN(valor)){
+        console.log('No es un nuemro');
+
+    }
+    else{
+        console.log('Es un numero');
+        puntos = valor * 1;
+    }
+
+    console.log(puntos);
+
+
+}
+
+valorCarta('KD');
